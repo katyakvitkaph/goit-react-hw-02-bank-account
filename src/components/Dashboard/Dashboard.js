@@ -34,7 +34,7 @@ export default class Dashboard extends Component {
   };
 
   onWithdraw = () => {
-    if (this.state.amount < this.state.balance) {
+    if (this.state.amount <= this.state.balance) {
       this.setState(prevState => ({
         balance: prevState.balance - +prevState.amount,
       }));
